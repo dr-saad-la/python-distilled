@@ -2,8 +2,14 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: index
 chapters:
-- file: markdown
-- file: notebooks
-- file: markdown-notebooks
+- file: chap-00/intro.md
+  sections:
+    - file: chap-00/01-what-is-python.md
+    - file: chap-00/02-python-history.md
+    - file: chap-00/03-where-to-use-python.md
+    - file: chap-00/04-python-ins-and-outs.md
+- file: chap-01/intro.md
+  sections:
+    - file: chap-01/setup.md
