@@ -1,1 +1,630 @@
-<meta http-equiv="Refresh" content="0; url=intro.html" />
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Python Programming Distilled &#8212; Python Programming Distilled</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'index';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introduction to Python" href="chap-00/intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/book_logo.png" class="logo__image only-light" alt="Python Programming Distilled - Home"/>
+    <script>document.write(`<img src="_static/book_logo.png" class="logo__image only-dark" alt="Python Programming Distilled - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Python Programming Distilled
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="chap-00/intro.html">Introduction to Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap-00/01-what-is-python.html">What is Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap-00/02-python-history.html">Python History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap-00/03-where-to-use-python.html">Where to User Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="chap-00/04-python-ins-and-outs.html">Python Ins and Outs</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="chap-01/intro.html">Development Environment Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="chap-01/setup.html">Development Environment Setup</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Findex.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Python Programming Distilled</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-book">Why This Book?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-will-you-learn">What Will You Learn?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-is-this-book-for">Who Is This Book For?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-read-python-programming-distilled">Why Read Python Programming Distilled?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whats-next">What’s Next?</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="python-programming-distilled">
+<h1>Python Programming Distilled<a class="headerlink" href="#python-programming-distilled" title="Link to this heading">#</a></h1>
+<p><strong>Welcome to <em>Python Programming Distilled</em></strong>, a comprehensive and in-depth exploration of the Python programming language. This book is not just another guide to learning Python; it is designed to provide both beginners and experienced programmers with a thorough understanding of Python’s fundamentals, advanced features, and best practices.</p>
+<section id="why-this-book">
+<h2>Why This Book?<a class="headerlink" href="#why-this-book" title="Link to this heading">#</a></h2>
+<p>Python is known for its simplicity and versatility, making it a popular choice for beginners and professionals alike. However, with the rapid evolution of the Python ecosystem, keeping up with best practices and understanding the language’s deeper aspects can be challenging. <em>Python Programming Distilled</em> aims to fill this gap by offering a holistic approach that balances clarity with depth. Unlike other Python books, this book is structured to:</p>
+<ul class="simple">
+<li><p><strong>Teach Python in a New Way</strong>: This book focuses on providing a clear, step-by-step introduction to Python, guiding readers from the very basics to advanced concepts. The goal is not just to teach Python syntax, but to foster a deeper understanding of how Python thinks, so you can write better, more efficient code.</p></li>
+<li><p><strong>Delve Deep into the Language</strong>: As the name <em>Distilled</em> suggests, this book distills the most essential and powerful features of Python while also diving deep into the intricacies that make Python unique. Each chapter is crafted to provide practical insights and deeper knowledge of Python’s core features and libraries, helping you become a proficient Python programmer.</p></li>
+</ul>
+</section>
+<section id="what-will-you-learn">
+<h2>What Will You Learn?<a class="headerlink" href="#what-will-you-learn" title="Link to this heading">#</a></h2>
+<p><em>Python Programming Distilled</em> is divided into several key sections, each designed to build upon the previous one, ensuring a structured and engaging learning experience:</p>
+<ol class="arabic simple">
+<li><p><strong>Getting Started with Python</strong>:</p>
+<ul class="simple">
+<li><p>A brief history of Python, its evolution, and why it is the language of choice for developers across various fields.</p></li>
+<li><p>Setting up Python and your development environment, whether you are using Jupyter Notebook, VS Code, or any other IDE.</p></li>
+</ul>
+</li>
+<li><p><strong>Fundamentals of Python</strong>:</p>
+<ul class="simple">
+<li><p>An in-depth look at Python’s basic data types, including integers, floats, strings, and booleans.</p></li>
+<li><p>A thorough discussion of Python’s control structures, such as loops, conditionals, and functions, with best practices for writing clean and efficient code.</p></li>
+<li><p>Understanding Python’s memory model, variables, and scope, helping you write code that is both efficient and easy to debug.</p></li>
+</ul>
+</li>
+<li><p><strong>Advanced Python Concepts</strong>:</p>
+<ul class="simple">
+<li><p>Explore Python’s object-oriented programming (OOP) capabilities, including classes, inheritance, polymorphism, and encapsulation.</p></li>
+<li><p>Delve into Python’s functional programming features, such as list comprehensions, lambda functions, and decorators.</p></li>
+<li><p>Gain insights into Python’s data structures, including lists, dictionaries, sets, and tuples, with examples of when and how to use each.</p></li>
+</ul>
+</li>
+<li><p><strong>Working with Python Modules and Packages</strong>:</p>
+<ul class="simple">
+<li><p>An exploration of Python’s rich standard library, focusing on modules that make Python a powerful tool for various applications.</p></li>
+<li><p>How to organize your code with modules and packages, and the best practices for creating reusable and maintainable code.</p></li>
+<li><p>Using virtual environments and <code class="docutils literal notranslate"><span class="pre">pip</span></code> for dependency management, ensuring that your projects remain isolated and conflict-free.</p></li>
+</ul>
+</li>
+<li><p><strong>Data Handling and Analysis</strong>:</p>
+<ul class="simple">
+<li><p>A deep dive into data handling with libraries such as <code class="docutils literal notranslate"><span class="pre">pandas</span></code> and <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, enabling you to manipulate large datasets efficiently.</p></li>
+<li><p>Practical examples of data cleaning, transformation, and visualization using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and <code class="docutils literal notranslate"><span class="pre">seaborn</span></code>.</p></li>
+<li><p>Real-world case studies that demonstrate how Python is used in data science, machine learning, and statistical analysis.</p></li>
+</ul>
+</li>
+<li><p><strong>Web Development with Python</strong>:</p>
+<ul class="simple">
+<li><p>Building web applications using popular frameworks like <code class="docutils literal notranslate"><span class="pre">Flask</span></code> and <code class="docutils literal notranslate"><span class="pre">Django</span></code>.</p></li>
+<li><p>Understanding RESTful APIs and how to integrate external data into your Python applications.</p></li>
+<li><p>Best practices for testing and deploying Python web applications, ensuring that your code is robust and scalable.</p></li>
+</ul>
+</li>
+<li><p><strong>Python for Automation and Scripting</strong>:</p>
+<ul class="simple">
+<li><p>Learn how to automate repetitive tasks and write scripts for system administration, file manipulation, and web scraping.</p></li>
+<li><p>Examples include automating data retrieval, managing files and directories, and interfacing with external APIs.</p></li>
+</ul>
+</li>
+<li><p><strong>Exploring Python’s Ecosystem</strong>:</p>
+<ul class="simple">
+<li><p>A look into Python’s vast ecosystem, including tools and libraries for scientific computing, artificial intelligence, machine learning, and natural language processing.</p></li>
+<li><p>How to leverage <code class="docutils literal notranslate"><span class="pre">scikit-learn</span></code> for machine learning, <code class="docutils literal notranslate"><span class="pre">TensorFlow</span></code> and <code class="docutils literal notranslate"><span class="pre">PyTorch</span></code> for deep learning, and <code class="docutils literal notranslate"><span class="pre">NLTK</span></code> for natural language processing.</p></li>
+</ul>
+</li>
+<li><p><strong>Best Practices and Pythonic Code</strong>:</p>
+<ul class="simple">
+<li><p>Learn what it means to write “Pythonic” code and how to adhere to the principles of readable, idiomatic Python.</p></li>
+<li><p>Explore the <code class="docutils literal notranslate"><span class="pre">PEP</span> <span class="pre">8</span></code> style guide and other community standards for writing clean, maintainable code.</p></li>
+<li><p>Tips for debugging, profiling, and optimizing Python code to ensure that it runs smoothly in production.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="who-is-this-book-for">
+<h2>Who Is This Book For?<a class="headerlink" href="#who-is-this-book-for" title="Link to this heading">#</a></h2>
+<p><em>Python Programming Distilled</em> is crafted for a wide range of readers:</p>
+<ul class="simple">
+<li><p><strong>Beginners</strong>: If you’re new to programming, this book will guide you from the basics to the advanced, ensuring that you understand each concept before moving on.</p></li>
+<li><p><strong>Intermediate Programmers</strong>: If you’ve been using Python for a while but want to deepen your understanding of the language, this book will help you master the more intricate features and advanced programming paradigms.</p></li>
+<li><p><strong>Professionals</strong>: For those using Python professionally, this book serves as a comprehensive reference guide, providing insights into best practices, efficiency tips, and advanced libraries that can enhance your workflow.</p></li>
+</ul>
+<section id="why-read-python-programming-distilled">
+<h3>Why Read Python Programming Distilled?<a class="headerlink" href="#why-read-python-programming-distilled" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Comprehensive Yet Focused</strong>: While the book covers a wide range of topics, it’s designed to be easy to navigate. Each chapter is self-contained, allowing you to read it sequentially or jump to the topics that interest you most.</p></li>
+<li><p><strong>Hands-On Learning</strong>: Each section includes practical examples, exercises, and real-world projects to reinforce what you learn, ensuring that you can apply Python concepts to solve actual problems.</p></li>
+<li><p><strong>Updated for the Latest Python Versions</strong>: The book includes the latest features and changes in Python 3.x, ensuring that you stay up-to-date with current best practices and tools.</p></li>
+</ul>
+</section>
+</section>
+<section id="whats-next">
+<h2>What’s Next?<a class="headerlink" href="#whats-next" title="Link to this heading">#</a></h2>
+<p>Embark on your journey with <em>Python Programming Distilled</em> and transform the way you think about programming with Python. Whether you want to automate tasks, analyze data, build web applications, or simply deepen your knowledge of Python, this book has you covered. Let’s dive in and unlock the full potential of Python together!</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="chap-00/intro.html">Introduction to Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chap-01/intro.html">Development Environment Setup</a></li>
+</ul>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="chap-00/intro.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Introduction to Python</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#why-this-book">Why This Book?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-will-you-learn">What Will You Learn?</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#who-is-this-book-for">Who Is This Book For?</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#why-read-python-programming-distilled">Why Read Python Programming Distilled?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#whats-next">What’s Next?</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Saad Laouadi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
