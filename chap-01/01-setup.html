@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Development Environment Setup &#8212; Python Programming Distilled</title>
+    <title>Installing Python on Major Platforms &#8212; Python Programming Distilled</title>
   
   
   
@@ -57,11 +57,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chap-01/intro';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap-01/01-setup';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installing Python on Major Platforms" href="01-setup.html" />
-    <link rel="prev" title="Understanding How Python is Written and How It Works" href="../chap-00/04-python-ins-and-outs.html" />
+    <link rel="next" title="Python Interpreters" href="02-python-interpreters.html" />
+    <link rel="prev" title="Development Environment Setup" href="intro.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -187,8 +187,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../chap-00/04-python-ins-and-outs.html">Understanding How Python is Written and How It Works</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Development Environment Setup</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="01-setup.html">Installing Python on Major Platforms</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Development Environment Setup</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Installing Python on Major Platforms</a></li>
 <li class="toctree-l2"><a class="reference internal" href="02-python-interpreters.html">Python Interpreters</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03-python-repls.html">Python REPLs</a></li>
 <li class="toctree-l2"><a class="reference internal" href="04-python-idle.html">Python - IDLE (Integrated Development and Learning Environment)</a></li>
@@ -265,7 +265,7 @@
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchap-01/intro.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchap-01/01-setup.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -295,7 +295,7 @@
       
       
       
-      <li><a href="../_sources/chap-01/intro.md" target="_blank"
+      <li><a href="../_sources/chap-01/01-setup.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -379,7 +379,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Development Environment Setup</h1>
+    <h1>Installing Python on Major Platforms</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -389,7 +389,6 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-python-on-major-platforms">Installing Python on Major Platforms</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-python-on-windows">Installing Python on Windows</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-winget">Method 1: Using <code class="docutils literal notranslate"><span class="pre">winget</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-chocolatey-choco">Method 2: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)</a></li>
@@ -421,12 +420,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="development-environment-setup">
-<h1>Development Environment Setup<a class="headerlink" href="#development-environment-setup" title="Link to this heading">#</a></h1>
-<section id="installing-python-on-major-platforms">
-<h2>Installing Python on Major Platforms<a class="headerlink" href="#installing-python-on-major-platforms" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="installing-python-on-major-platforms">
+<h1>Installing Python on Major Platforms<a class="headerlink" href="#installing-python-on-major-platforms" title="Link to this heading">#</a></h1>
 <p>Python is a versatile and widely-used programming language. To start programming in Python, you first need to install the interpreter on your computer. This guide covers the installation process for Python on major platforms: <strong>Windows</strong>, <strong>macOS</strong>, and <strong>Linux</strong>. Additionally, we’ll focus on using command-line tools for installing Python, offering a quick and efficient way to set up Python on your system.</p>
-</section>
 <section id="installing-python-on-windows">
 <h2>Installing Python on Windows<a class="headerlink" href="#installing-python-on-windows" title="Link to this heading">#</a></h2>
 <p>There are several ways to install Python on Windows. While you can download the installer directly from the <a class="reference external" href="https://www.python.org/downloads/">Python website</a>, using command-line package managers like <code class="docutils literal notranslate"><span class="pre">winget</span></code>, <code class="docutils literal notranslate"><span class="pre">choco</span></code>, and <code class="docutils literal notranslate"><span class="pre">scoop</span></code> can simplify the process.</p>
@@ -672,8 +668,6 @@ which<span class="w"> </span>python
 </ul>
 <p>No matter which method you choose, Python’s versatile installation options make it easy to get started with this powerful programming language on any platform.</p>
 </section>
-<div class="toctree-wrapper compound">
-</div>
 </section>
 
     <script type="text/x-thebe-config">
@@ -707,20 +701,20 @@ which<span class="w"> </span>python
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../chap-00/04-python-ins-and-outs.html"
+       href="intro.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Understanding How Python is Written and How It Works</p>
+        <p class="prev-next-title">Development Environment Setup</p>
       </div>
     </a>
     <a class="right-next"
-       href="01-setup.html"
+       href="02-python-interpreters.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Installing Python on Major Platforms</p>
+        <p class="prev-next-title">Python Interpreters</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -740,7 +734,6 @@ which<span class="w"> </span>python
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-python-on-major-platforms">Installing Python on Major Platforms</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-python-on-windows">Installing Python on Windows</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-winget">Method 1: Using <code class="docutils literal notranslate"><span class="pre">winget</span></code></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-chocolatey-choco">Method 2: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)</a></li>

@@ -1,6 +1,4 @@
-# Development Environment Setup
-
-## Installing Python on Major Platforms
+# Installing Python on Major Platforms
 
 Python is a versatile and widely-used programming language. To start programming in Python, you first need to install the interpreter on your computer. This guide covers the installation process for Python on major platforms: **Windows**, **macOS**, and **Linux**. Additionally, we'll focus on using command-line tools for installing Python, offering a quick and efficient way to set up Python on your system.
 
