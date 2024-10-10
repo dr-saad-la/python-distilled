@@ -363,7 +363,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -379,6 +381,18 @@ document.write(`
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-history">A Brief History</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-s-key-features">Python’s Key Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-python">Advantages of Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-tools-and-frameworks">Python Tools and Frameworks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -390,6 +404,56 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="what-is-python">
 <h1>What is Python?<a class="headerlink" href="#what-is-python" title="Link to this heading">#</a></h1>
+<p><strong>Python</strong> is a versatile, high-level, and open-source programming language known for its simplicity and readability. Released under a GPL-compatible license, Python is managed by the <strong>Python Software Foundation (PSF)</strong>, a non-profit organization that holds the intellectual property rights to Python.</p>
+<p>Python’s design emphasizes code readability and simplicity, making it a popular choice for both beginners and experienced developers. It supports various programming paradigms, including object-oriented, procedural, and functional programming, making it suitable for a wide range of applications from web development to data science.</p>
+<section id="a-brief-history">
+<h2>A Brief History<a class="headerlink" href="#a-brief-history" title="Link to this heading">#</a></h2>
+<p>Python was conceived by <strong>Guido van Rossum</strong> in the late 1980s and officially released in 1991 while he was working at <strong>Centrum Wiskunde &amp; Informatica (CWI)</strong> in the Netherlands. Python was intended to succeed the ABC programming language, with improvements in error handling and extensibility. The language is named after the comedy show <strong>‘Monty Python’s Flying Circus’</strong>, not after the snake, reflecting Van Rossum’s aim to make coding in Python as fun as possible.</p>
+<p>In recent years, Python’s popularity has skyrocketed, driven by its versatility and ease of use. According to Stack Overflow’s Developer Survey, Python consistently ranks among the top three <strong>Most Loved Programming Languages</strong>, reflecting its widespread adoption in various industries, from web development to data analytics and machine learning.</p>
+</section>
+<section id="python-s-key-features">
+<h2>Python’s Key Features<a class="headerlink" href="#python-s-key-features" title="Link to this heading">#</a></h2>
+<p>Python’s design and functionality include a range of features that make it stand out as a powerful programming language:</p>
+<ol class="arabic simple">
+<li><p><strong>Interpreter-Based Language</strong>: Python is an interpreted language, meaning that it executes instructions line by line, making it easier to test and debug.</p></li>
+<li><p><strong>Extensive Data Types</strong>: Python supports a wide range of built-in data types, including numbers (integers, floating-point, complex numbers), strings (both ASCII and Unicode), lists, dictionaries, and more.</p></li>
+<li><p><strong>Strong and Dynamic Typing</strong>: Python allows for both strongly typed variables and dynamically typed assignments, giving flexibility to the developer.</p></li>
+<li><p><strong>Object-Oriented Programming (OOP)</strong>: Python supports object-oriented principles such as classes, inheritance, encapsulation, and polymorphism, making it suitable for building complex applications.</p></li>
+<li><p><strong>Cleaner Exception Handling</strong>: Python provides robust error handling with try-except blocks, enabling developers to manage exceptions gracefully.</p></li>
+<li><p><strong>Automatic Memory Management</strong>: Python handles memory allocation and deallocation automatically using a built-in garbage collector, simplifying resource management.</p></li>
+<li><p><strong>Rich Ecosystem of Libraries</strong>: Python includes a vast library of built-in and third-party modules, enabling developers to quickly integrate functionality for tasks like web development, data analysis, and more.</p></li>
+</ol>
+</section>
+<section id="advantages-of-python">
+<h2>Advantages of Python<a class="headerlink" href="#advantages-of-python" title="Link to this heading">#</a></h2>
+<p>Python offers numerous benefits that make it a preferred choice for developers across various domains:</p>
+<ul class="simple">
+<li><p><strong>Enhanced Readability</strong>: Python’s syntax emphasizes readability, using indentation to define code blocks instead of brackets or braces, as seen in languages like C, C++, and Java. This design leads to cleaner and more understandable code.</p></li>
+<li><p><strong>Free and Open Source</strong>: Python is distributed as open-source software, making it freely available for all. It has a vibrant community that contributes to its development, creating libraries and frameworks for diverse applications like machine learning, scientific computing, and web development.</p></li>
+<li><p><strong>Cross-Platform Compatibility</strong>: Python is cross-platform, meaning it can run seamlessly on different operating systems like Windows, macOS, and Linux. This makes it easy to develop applications that are portable across different environments.</p></li>
+<li><p><strong>Multiple Programming Paradigms</strong>: Python supports various programming paradigms, including imperative, procedural, object-oriented, and functional programming styles, allowing developers to choose the approach that best suits their project.</p></li>
+<li><p><strong>Extensible and Embeddable</strong>: Python can be extended with additional functionality through modules written in other programming languages like C, C++, and Java. This capability makes Python highly adaptable and enables it to interact with other software components.</p></li>
+<li><p><strong>Database Integration</strong>: Python’s standard library includes the <strong>DB-API</strong>, which allows seamless connectivity with databases such as <strong>Oracle</strong>, <strong>MySQL</strong>, <strong>SQLite</strong>, and more. This makes it easy to manage data storage, retrieval, and processing within Python applications.</p></li>
+<li><p><strong>GUI Development</strong>: Python supports <strong>Tkinter</strong>, a GUI toolkit included in the standard library, which enables the creation of simple graphical interfaces. Additionally, Python supports other GUI libraries like <strong>PyQt</strong>, <strong>Kivy</strong>, and <strong>WxWidgets</strong>, making it possible to develop complex desktop applications.</p></li>
+<li><p><strong>Interoperability with Other Technologies</strong>: Python can be integrated with other programming environments and technologies like <strong>C</strong>, <strong>C++</strong>, <strong>Java</strong>, <strong>ActiveX</strong>, and <strong>CORBA</strong>. This makes it suitable for a wide range of use cases, from embedded systems to enterprise-level software solutions.</p></li>
+</ul>
+</section>
+<section id="python-tools-and-frameworks">
+<h2>Python Tools and Frameworks<a class="headerlink" href="#python-tools-and-frameworks" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>The following lists important tools and frameworks to develop different types of Python applications:</p></li>
+<li><p><strong>Web Development</strong>: Django, Pyramid, Bottle, Tornado, Flask, web2py.</p></li>
+<li><p><strong>GUI Development</strong>: tkInter, PyGObject, PyQt, PySide, Kivy, wxPython.</p></li>
+<li><p><strong>Scientific and Numeric</strong>: SciPy, Pandas, IPython.</p></li>
+<li><p><strong>Software Development</strong>: Buildbot, Trac, Roundup.</p></li>
+<li><p><strong>System Administration</strong>: Ansible, Salt, OpenStack.</p></li>
+</ul>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>With its flexibility, readability, and wide range of libraries, Python is a great choice for developers in various fields like web development, data science, AI, and automation.
+Python’s intuitive syntax and wide range of tools make it suitable for beginners starting their programming journey and experienced developers building complex applications.</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -446,6 +510,25 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-brief-history">A Brief History</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-s-key-features">Python’s Key Features</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#advantages-of-python">Advantages of Python</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#python-tools-and-frameworks">Python Tools and Frameworks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
