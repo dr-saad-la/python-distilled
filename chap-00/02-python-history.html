@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Python History &#8212; Python Programming Distilled</title>
+    <title>Python Version History &#8212; Python Programming Distilled</title>
   
   
   
@@ -182,9 +182,9 @@
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Introduction to Python</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="01-what-is-python.html">What is Python?</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Python History</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Python Version History</a></li>
 <li class="toctree-l2"><a class="reference internal" href="03-where-to-use-python.html">Where to User Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="04-python-ins-and-outs.html">Python Ins and Outs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-python-ins-and-outs.html">Understanding How Python is Written and How It Works</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../chap-01/intro.html">Development Environment Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
@@ -363,7 +363,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
 </div></div>
       
     </div>
@@ -374,11 +376,29 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Python History</h1>
+    <h1>Python Version History</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#origins-of-python">Origins of Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-1-x-series-1994-2000">Python 1.x Series (1994-2000)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-2-x-series-2000-2020">Python 2.x Series (2000-2020)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-3-x-series-2008-present">Python 3.x Series (2008-Present)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#end-of-python-2-x-support">End of Python 2.x Support</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-python-versions-and-their-features">Key Python Versions and Their Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python-s-future">Python’s Future</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -388,8 +408,140 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="python-history">
-<h1>Python History<a class="headerlink" href="#python-history" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="python-version-history">
+<h1>Python Version History<a class="headerlink" href="#python-version-history" title="Link to this heading">#</a></h1>
+<p>Python is one of the most popular high-level programming languages, known for its simplicity and versatility. Over the years, Python has evolved significantly, from its early beginnings to the robust, multi-paradigm language it is today.</p>
+<section id="origins-of-python">
+<h2>Origins of Python<a class="headerlink" href="#origins-of-python" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Python was conceived in the late 1980s</strong> by Guido van Rossum at the Centrum Wiskunde &amp; Informatica (CWI) in the Netherlands. Van Rossum aimed to create a successor to the ABC programming language, which was designed for teaching programming.</p></li>
+<li><p><strong>Development began in December 1989</strong>, and Python 0.9.0, the first official version, was released in February 1991. This version included key features such as functions, exception handling, and the core data types (e.g., <code class="docutils literal notranslate"><span class="pre">list</span></code>, <code class="docutils literal notranslate"><span class="pre">dict</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>).</p></li>
+</ul>
+<section id="python-1-x-series-1994-2000">
+<h3>Python 1.x Series (1994-2000)<a class="headerlink" href="#python-1-x-series-1994-2000" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Python 1.0</strong>: Released on <strong>January 26, 1994</strong>, Python 1.0 introduced features like modules, exceptions, strings, functions, and the interactive shell. It also introduced Python’s object-oriented programming support.</p></li>
+<li><p><strong>Python 1.5</strong>: Released in <strong>December 1997</strong>, this version gained popularity as Python became more widely adopted. Python 1.5 introduced improvements in memory management and performance, making it more stable.</p></li>
+<li><p><strong>Python 1.6</strong>: Released in <strong>September 2000</strong>, this was the last version in the Python 1.x series, and it added Unicode support, which laid the foundation for better text processing in future versions.</p></li>
+</ul>
+</section>
+<section id="python-2-x-series-2000-2020">
+<h3>Python 2.x Series (2000-2020)<a class="headerlink" href="#python-2-x-series-2000-2020" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Python 2.0</strong>: Released on <strong>October 16, 2000</strong>, Python 2.0 introduced major features such as garbage collection, list comprehensions, and the <code class="docutils literal notranslate"><span class="pre">cycle-detecting</span> <span class="pre">garbage</span> <span class="pre">collector</span></code>. This was a landmark release that set Python on the path toward its modern form.</p>
+<p>Major features of Python 2.0:</p>
+<ul class="simple">
+<li><p>List comprehensions for more concise loops.</p></li>
+<li><p>Garbage collection based on reference counting.</p></li>
+<li><p>Support for Unicode, improving its usability for international users.</p></li>
+</ul>
+</li>
+<li><p><strong>Python 2.7</strong>: Released on <strong>July 3, 2010</strong>, Python 2.7 was the last release in the 2.x series and was supported until <strong>January 1, 2020</strong>. It introduced several features back-ported from Python 3.x, such as improved I/O handling and memory management. Python 2.7 remained the default Python version for many projects for several years due to its backward compatibility.</p></li>
+</ul>
+</section>
+<section id="python-3-x-series-2008-present">
+<h3>Python 3.x Series (2008-Present)<a class="headerlink" href="#python-3-x-series-2008-present" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Python 3.0</strong>: Released on <strong>December 3, 2008</strong>, Python 3.0, also known as “Python 3000” or “Py3k”, was designed to rectify inherent design flaws in Python 2.x. It was not backward-compatible with Python 2.x, requiring developers to rewrite portions of their code.</p>
+<p>Major changes in Python 3.0:</p>
+<ul class="simple">
+<li><p>A more intuitive <code class="docutils literal notranslate"><span class="pre">print()</span></code> function.</p></li>
+<li><p>Changes to integer division (<code class="docutils literal notranslate"><span class="pre">/</span></code> now returns a float).</p></li>
+<li><p>Unicode became the default for strings (improved internationalization).</p></li>
+<li><p>Removal of old-style classes (in favor of new-style classes).</p></li>
+</ul>
+<p>While it introduced many new features and optimizations, the migration from Python 2 to Python 3 was gradual, as Python 2 had a large codebase and many libraries that needed updates.</p>
+</li>
+<li><p><strong>Python 3.1 - 3.7</strong>: Each subsequent version brought incremental improvements in speed, new syntax, and libraries. Some of the key enhancements included:</p>
+<ul class="simple">
+<li><p><strong>Python 3.1</strong>: Released in <strong>June 2009</strong>, introduced ordered dictionaries and other performance improvements.</p></li>
+<li><p><strong>Python 3.2</strong>: Released in <strong>February 2011</strong>, improved I/O and PEP 3147 support for per-user site packages.</p></li>
+<li><p><strong>Python 3.3</strong>: Released in <strong>September 2012</strong>, introduced the <code class="docutils literal notranslate"><span class="pre">yield</span> <span class="pre">from</span></code> syntax and a new <code class="docutils literal notranslate"><span class="pre">venv</span></code> module for virtual environments.</p></li>
+<li><p><strong>Python 3.4</strong>: Released in <strong>March 2014</strong>, added the <code class="docutils literal notranslate"><span class="pre">asyncio</span></code> library for asynchronous programming and introduced <code class="docutils literal notranslate"><span class="pre">enum</span></code>.</p></li>
+<li><p><strong>Python 3.5</strong>: Released in <strong>September 2015</strong>, introduced the <code class="docutils literal notranslate"><span class="pre">await</span></code> and <code class="docutils literal notranslate"><span class="pre">async</span></code> keywords, enabling easier asynchronous programming.</p></li>
+<li><p><strong>Python 3.6</strong>: Released in <strong>December 2016</strong>, introduced formatted string literals (f-strings), underscores in numeric literals for readability, and improved type annotations.</p></li>
+<li><p><strong>Python 3.7</strong>: Released in <strong>June 2018</strong>, introduced data classes, postponed evaluation of type annotations, and more.</p></li>
+</ul>
+</li>
+<li><p><strong>Python 3.8</strong>: Released in <strong>October 2019</strong>, introduced several new features, including assignment expressions (the “walrus operator”: <code class="docutils literal notranslate"><span class="pre">:=</span></code>), positional-only parameters, f-string improvements, and typing enhancements.</p></li>
+<li><p><strong>Python 3.9</strong>: Released in <strong>October 2020</strong>, brought dictionary union operators (<code class="docutils literal notranslate"><span class="pre">|</span></code> and <code class="docutils literal notranslate"><span class="pre">|=</span></code>), type hinting improvements, and better support for working with complex data structures.</p></li>
+<li><p><strong>Python 3.10</strong>: Released in <strong>October 2021</strong>, Python 3.10 introduced structural pattern matching, which added more expressive ways of working with complex data structures, and improved error messages.</p></li>
+<li><p><strong>Python 3.11</strong>: Released in <strong>October 2022</strong>, Python 3.11 focused heavily on improving performance and introduced more refined error messages, as well as optimization improvements in memory management.</p></li>
+<li><p><strong>Python 3.12</strong>: Scheduled for release in <strong>October 2023</strong>, Python 3.12 is expected to bring more performance improvements, better error handling, and enhanced standard libraries.</p></li>
+</ul>
+</section>
+<section id="end-of-python-2-x-support">
+<h3>End of Python 2.x Support<a class="headerlink" href="#end-of-python-2-x-support" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The Python Software Foundation (PSF) supported Python 2.x and Python 3.x in parallel for many years because a large body of existing code could not be ported forward to Python 3 quickly. This backward compatibility led to the prolonged use of Python 2.7.</p></li>
+<li><p>On <strong>January 1, 2020</strong>, official support for Python 2.x ended, meaning no further updates, bug fixes, or security patches would be released for Python 2. This event marked the official migration of Python users to the Python 3.x series.</p></li>
+</ul>
+</section>
+<section id="key-python-versions-and-their-features">
+<h3>Key Python Versions and Their Features<a class="headerlink" href="#key-python-versions-and-their-features" title="Link to this heading">#</a></h3>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Version</p></th>
+<th class="head"><p>Release Date</p></th>
+<th class="head"><p>Key Features</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Python 1.0</p></td>
+<td><p>January 1994</p></td>
+<td><p>Basic features like modules, exceptions, and functions.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Python 2.0</p></td>
+<td><p>October 2000</p></td>
+<td><p>Garbage collection, list comprehensions, and Unicode support.</p></td>
+</tr>
+<tr class="row-even"><td><p>Python 2.7</p></td>
+<td><p>July 2010</p></td>
+<td><p>Final release of the 2.x series, supported until 2020.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Python 3.0</p></td>
+<td><p>December 2008</p></td>
+<td><p>Not backward-compatible, introduced major improvements like <code class="docutils literal notranslate"><span class="pre">print()</span></code> function, Unicode by default.</p></td>
+</tr>
+<tr class="row-even"><td><p>Python 3.5</p></td>
+<td><p>September 2015</p></td>
+<td><p>Introduced <code class="docutils literal notranslate"><span class="pre">async</span></code> and <code class="docutils literal notranslate"><span class="pre">await</span></code>, making asynchronous programming easier.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Python 3.6</p></td>
+<td><p>December 2016</p></td>
+<td><p>F-strings, variable annotations, and underscore notation for numeric literals.</p></td>
+</tr>
+<tr class="row-even"><td><p>Python 3.8</p></td>
+<td><p>October 2019</p></td>
+<td><p>Assignment expressions (<code class="docutils literal notranslate"><span class="pre">:=</span></code>), positional-only parameters.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Python 3.9</p></td>
+<td><p>October 2020</p></td>
+<td><p>Dictionary union (`</p></td>
+</tr>
+<tr class="row-even"><td><p>Python 3.10</p></td>
+<td><p>October 2021</p></td>
+<td><p>Structural pattern matching, refined error messages.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Python 3.11</p></td>
+<td><p>October 2022</p></td>
+<td><p>Performance improvements, enhanced error messages.</p></td>
+</tr>
+<tr class="row-even"><td><p>Python 3.12</p></td>
+<td><p>October 2023</p></td>
+<td><p>Expected release with further performance optimizations.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="python-s-future">
+<h4>Python’s Future<a class="headerlink" href="#python-s-future" title="Link to this heading">#</a></h4>
+<ul class="simple">
+<li><p>Python continues to evolve, with a focus on improving performance, ease of use, and flexibility. The Python community is actively engaged in discussions about new features, optimizations, and enhancements to keep Python competitive and useful for a wide variety of use cases, including web development, data science, machine learning, and more.</p></li>
+</ul>
+</section>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -446,6 +598,31 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#origins-of-python">Origins of Python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-1-x-series-1994-2000">Python 1.x Series (1994-2000)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-2-x-series-2000-2020">Python 2.x Series (2000-2020)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#python-3-x-series-2008-present">Python 3.x Series (2008-Present)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#end-of-python-2-x-support">End of Python 2.x Support</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#key-python-versions-and-their-features">Key Python Versions and Their Features</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#python-s-future">Python’s Future</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
