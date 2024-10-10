@@ -1,0 +1,802 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Jupyter Notebook &#8212; Python Programming Distilled</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap-02/02-jupyter-notebook';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installing Visual Studio Code (VS Code)" href="03-vs-code.html" />
+    <link rel="prev" title="Jupyter Lab IDE" href="01-jupyter-lab-ide.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/book_logo.png" class="logo__image only-light" alt="Python Programming Distilled - Home"/>
+    <script>document.write(`<img src="../_static/book_logo.png" class="logo__image only-dark" alt="Python Programming Distilled - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Python Programming Distilled
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chap-00/intro.html">Introduction to Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/01-what-is-python.html">What is Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/02-python-history.html">Python Version History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/03-where-to-use-python.html">Where to User Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/04-python-ins-and-outs.html">Understanding How Python is Written and How It Works</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chap-01/intro.html">Development Environment Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/01-setup.html">Installing Python on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/02-python-interpreters.html">Python Interpreters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/03-python-repls.html">Python REPLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/04-python-idle.html">Python - IDLE (Integrated Development and Learning Environment)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Python Development Tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-jupyter-lab-ide.html">Jupyter Lab IDE</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Jupyter Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-vs-code.html">Installing Visual Studio Code (VS Code)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-pycharm.html">Installing PyCharm on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-spyder-ide.html">Installing Spyder on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-eclipse.html">Installing Eclipse IDE on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-emacs.html">Installing Emacs for Python Development on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-text-editors.html">Text Editors for Python Programming</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchap-02/02-jupyter-notebook.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chap-02/02-jupyter-notebook.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Jupyter Notebook</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-jupyter-notebook-on-windows">Installing Jupyter Notebook on Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-pip-recommended">Method 1: Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> (Recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-anaconda">Method 2: Using Anaconda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-chocolatey-choco">Method 3: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-jupyter-notebook-on-macos">Installing Jupyter Notebook on macOS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Method 1: Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> (Recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-brew">Method 2: Using <code class="docutils literal notranslate"><span class="pre">brew</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-anaconda">Method 3: Using Anaconda</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-jupyter-notebook-on-linux">Installing Jupyter Notebook on Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Method 1: Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> (Recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-apt-on-ubuntu">Method 2: Using <code class="docutils literal notranslate"><span class="pre">apt</span></code> on Ubuntu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Method 3: Using Anaconda</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="jupyter-notebook">
+<h1>Jupyter Notebook<a class="headerlink" href="#jupyter-notebook" title="Link to this heading">#</a></h1>
+<p><strong>Jupyter Notebook</strong> is a versatile and user-friendly interactive environment for writing and running code. It is especially popular among data scientists, educators, and researchers for its ability to combine live code, equations, visualizations, and narrative text in a single document. This guide covers the installation process of Jupyter Notebook on major platforms: <strong>Windows</strong>, <strong>macOS</strong>, and <strong>Linux</strong>. We will focus on using both GUI-based installers and command-line tools for a quick and effective setup.</p>
+<section id="installing-jupyter-notebook-on-windows">
+<h2>Installing Jupyter Notebook on Windows<a class="headerlink" href="#installing-jupyter-notebook-on-windows" title="Link to this heading">#</a></h2>
+<p>Jupyter Notebook can be installed on Windows using various methods, such as <code class="docutils literal notranslate"><span class="pre">pip</span></code>, <code class="docutils literal notranslate"><span class="pre">Anaconda</span></code>, or <code class="docutils literal notranslate"><span class="pre">choco</span></code>. Here are the installation methods:</p>
+<section id="method-1-using-pip-recommended">
+<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> (Recommended)<a class="headerlink" href="#method-1-using-pip-recommended" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">pip</span></code> is the standard package manager for Python and can be used to install Jupyter Notebook.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Open <strong>Command Prompt</strong> and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+<li><p>This command installs Jupyter Notebook and all necessary dependencies.</p></li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook<span class="w"> </span>--version
+</pre></div>
+</div>
+</li>
+<li><p><strong>Launch Jupyter Notebook</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+<p>This will open Jupyter Notebook in your default web browser.</p>
+</li>
+</ul>
+</section>
+<section id="method-2-using-anaconda">
+<h3>Method 2: Using Anaconda<a class="headerlink" href="#method-2-using-anaconda" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Anaconda is a comprehensive Python distribution that comes pre-installed with Jupyter Notebook and numerous data science libraries.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul class="simple">
+<li><p>Download <strong>Anaconda</strong> from <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda’s official website</a>.</p></li>
+<li><p>Follow the installation instructions provided by the installer.</p></li>
+</ul>
+</li>
+<li><p><strong>Launch Jupyter Notebook</strong>:</p>
+<ul>
+<li><p>Open <strong>Anaconda Navigator</strong> and click on the <strong>Jupyter Notebook</strong> icon, or run the following in the <strong>Anaconda Prompt</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-3-using-chocolatey-choco">
+<h3>Method 3: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)<a class="headerlink" href="#method-3-using-chocolatey-choco" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Chocolatey is a package manager for Windows that simplifies software installation.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Install <strong>Chocolatey</strong> following the instructions on <a class="reference external" href="https://chocolatey.org/install">Chocolatey’s website</a>.</p></li>
+<li><p>Once installed, open <strong>Command Prompt</strong> and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco<span class="w"> </span>install<span class="w"> </span>jupyter
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Launch Jupyter Notebook</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="installing-jupyter-notebook-on-macos">
+<h2>Installing Jupyter Notebook on macOS<a class="headerlink" href="#installing-jupyter-notebook-on-macos" title="Link to this heading">#</a></h2>
+<p>Jupyter Notebook can be installed on macOS using <strong>Homebrew</strong>, <code class="docutils literal notranslate"><span class="pre">pip</span></code>, or <strong>Anaconda</strong>:</p>
+<section id="id1">
+<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> (Recommended)<a class="headerlink" href="#id1" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">pip</span></code> is a quick and easy way to install Jupyter Notebook.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Open the <strong>Terminal</strong> and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook<span class="w"> </span>--version
+</pre></div>
+</div>
+</li>
+<li><p><strong>Launch Jupyter Notebook</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="method-2-using-brew">
+<h3>Method 2: Using <code class="docutils literal notranslate"><span class="pre">brew</span></code><a class="headerlink" href="#method-2-using-brew" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <strong>Homebrew</strong> is a package manager for macOS that simplifies software installations.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Install <strong>Homebrew</strong> (if not already installed) by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install Jupyter Notebook:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>jupyterlab
+</pre></div>
+</div>
+</li>
+<li><p><strong>Note</strong>: JupyterLab is a more advanced version of Jupyter Notebook, but it also includes Jupyter Notebook functionality.</p></li>
+</ul>
+</li>
+<li><p><strong>Launch Jupyter Notebook</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="method-3-using-anaconda">
+<h3>Method 3: Using Anaconda<a class="headerlink" href="#method-3-using-anaconda" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Anaconda provides a comprehensive environment for data science, including Jupyter Notebook.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul class="simple">
+<li><p>Download the <strong>Anaconda installer</strong> for macOS from <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda’s website</a>.</p></li>
+<li><p>Follow the installation instructions.</p></li>
+</ul>
+</li>
+<li><p><strong>Launch Jupyter Notebook</strong>:</p>
+<ul>
+<li><p>Open <strong>Anaconda Navigator</strong> and click <strong>Jupyter Notebook</strong> or run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="installing-jupyter-notebook-on-linux">
+<h2>Installing Jupyter Notebook on Linux<a class="headerlink" href="#installing-jupyter-notebook-on-linux" title="Link to this heading">#</a></h2>
+<p>Most Linux distributions can use their built-in package managers or <code class="docutils literal notranslate"><span class="pre">pip</span></code> for installing Jupyter Notebook. Here are some methods:</p>
+<section id="id2">
+<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> (Recommended)<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Installing with <code class="docutils literal notranslate"><span class="pre">pip</span></code> is straightforward and works across most Linux distributions.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Open the <strong>Terminal</strong> and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook<span class="w"> </span>--version
+</pre></div>
+</div>
+</li>
+<li><p><strong>Launch Jupyter Notebook</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="method-2-using-apt-on-ubuntu">
+<h3>Method 2: Using <code class="docutils literal notranslate"><span class="pre">apt</span></code> on Ubuntu<a class="headerlink" href="#method-2-using-apt-on-ubuntu" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Use <code class="docutils literal notranslate"><span class="pre">apt</span></code> to install Python and then Jupyter Notebook.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Open <strong>Terminal</strong> and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-pip
+pip3<span class="w"> </span>install<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Launch Jupyter Notebook</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+<section id="id3">
+<h3>Method 3: Using Anaconda<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Anaconda provides an all-in-one solution for data science, including Jupyter Notebook.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul class="simple">
+<li><p>Download the Anaconda installer for Linux from <a class="reference external" href="https://www.anaconda.com/products/distribution">Anaconda’s website</a>.</p></li>
+<li><p>Run the installer in the <strong>Terminal</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Launch Jupyter Notebook</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter<span class="w"> </span>notebook
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>Jupyter Notebook is a versatile tool for interactive coding, data analysis, and sharing code-rich documents. The installation process varies slightly depending on the platform, but with methods like <code class="docutils literal notranslate"><span class="pre">pip</span></code>, Anaconda, and package managers like <code class="docutils literal notranslate"><span class="pre">brew</span></code> or <code class="docutils literal notranslate"><span class="pre">choco</span></code>, setting up Jupyter Notebook is a straightforward task.</p>
+<ul class="simple">
+<li><p><strong>Windows</strong> users can install Jupyter with <code class="docutils literal notranslate"><span class="pre">pip</span></code>, Anaconda, or <code class="docutils literal notranslate"><span class="pre">choco</span></code>.</p></li>
+<li><p><strong>macOS</strong> users can use <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">brew</span></code> for a quick setup.</p></li>
+<li><p><strong>Linux</strong> users have the flexibility of using <code class="docutils literal notranslate"><span class="pre">pip</span></code>, <code class="docutils literal notranslate"><span class="pre">apt</span></code>, or Anaconda based on their preference.</p></li>
+</ul>
+<p>Once installed, Jupyter Notebook offers a powerful and user-friendly environment for writing and sharing Python code.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chap-02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="01-jupyter-lab-ide.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Jupyter Lab IDE</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="03-vs-code.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Installing Visual Studio Code (VS Code)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-jupyter-notebook-on-windows">Installing Jupyter Notebook on Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-pip-recommended">Method 1: Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> (Recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-anaconda">Method 2: Using Anaconda</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-chocolatey-choco">Method 3: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-jupyter-notebook-on-macos">Installing Jupyter Notebook on macOS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Method 1: Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> (Recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-brew">Method 2: Using <code class="docutils literal notranslate"><span class="pre">brew</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-anaconda">Method 3: Using Anaconda</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-jupyter-notebook-on-linux">Installing Jupyter Notebook on Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Method 1: Using <code class="docutils literal notranslate"><span class="pre">pip</span></code> (Recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-apt-on-ubuntu">Method 2: Using <code class="docutils literal notranslate"><span class="pre">apt</span></code> on Ubuntu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Method 3: Using Anaconda</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Saad Laouadi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

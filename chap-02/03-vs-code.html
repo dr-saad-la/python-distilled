@@ -1,0 +1,1014 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Installing Visual Studio Code (VS Code) &#8212; Python Programming Distilled</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap-02/03-vs-code';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installing PyCharm on Major Platforms" href="04-pycharm.html" />
+    <link rel="prev" title="Jupyter Notebook" href="02-jupyter-notebook.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/book_logo.png" class="logo__image only-light" alt="Python Programming Distilled - Home"/>
+    <script>document.write(`<img src="../_static/book_logo.png" class="logo__image only-dark" alt="Python Programming Distilled - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Python Programming Distilled
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chap-00/intro.html">Introduction to Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/01-what-is-python.html">What is Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/02-python-history.html">Python Version History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/03-where-to-use-python.html">Where to User Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/04-python-ins-and-outs.html">Understanding How Python is Written and How It Works</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chap-01/intro.html">Development Environment Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/01-setup.html">Installing Python on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/02-python-interpreters.html">Python Interpreters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/03-python-repls.html">Python REPLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/04-python-idle.html">Python - IDLE (Integrated Development and Learning Environment)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Python Development Tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-jupyter-lab-ide.html">Jupyter Lab IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-jupyter-notebook.html">Jupyter Notebook</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Installing Visual Studio Code (VS Code)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="04-pycharm.html">Installing PyCharm on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-spyder-ide.html">Installing Spyder on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-eclipse.html">Installing Eclipse IDE on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-emacs.html">Installing Emacs for Python Development on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-text-editors.html">Text Editors for Python Programming</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchap-02/03-vs-code.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chap-02/03-vs-code.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Installing Visual Studio Code (VS Code)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-vs-code-on-windows">Installing VS Code on Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-winget">Method 1: Using <code class="docutils literal notranslate"><span class="pre">winget</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-chocolatey-choco">Method 2: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-scoop">Method 3: Using <code class="docutils literal notranslate"><span class="pre">scoop</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-4-using-the-installer">Method 4: Using the Installer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-vs-code-on-macos">Installing VS Code on macOS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-brew">Method 1: Using <code class="docutils literal notranslate"><span class="pre">brew</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-the-installer">Method 2: Using the Installer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-vs-code-on-linux">Installing VS Code on Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-apt-for-debian-ubuntu">Method 1: Using <code class="docutils literal notranslate"><span class="pre">apt</span></code> for Debian/Ubuntu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-dnf-for-fedora">Method 2: Using <code class="docutils literal notranslate"><span class="pre">dnf</span></code> for Fedora</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-yum-for-centos-rhel">Method 3: Using <code class="docutils literal notranslate"><span class="pre">yum</span></code> for CentOS/RHEL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-4-using-the-deb-or-rpm-package">Method 4: Using the <code class="docutils literal notranslate"><span class="pre">.deb</span></code> or <code class="docutils literal notranslate"><span class="pre">.rpm</span></code> Package</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-python-in-vs-code">Setting Up Python in VS Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-python-extension">1. <strong>Installing the Python Extension</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-the-python-interpreter">2. <strong>Selecting the Python Interpreter</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-extensions-for-python-development">3. <strong>Recommended Extensions for Python Development</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-python-scripts-in-vs-code">4. <strong>Running Python Scripts in VS Code</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-virtual-environments-in-vs-code">5. <strong>Configuring Virtual Environments in VS Code</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="installing-visual-studio-code-vs-code">
+<h1>Installing Visual Studio Code (VS Code)<a class="headerlink" href="#installing-visual-studio-code-vs-code" title="Link to this heading">#</a></h1>
+<p><strong>Visual Studio Code (VS Code)</strong> is a popular open-source code editor developed by Microsoft. It offers powerful features like syntax highlighting, debugging support, integrated Git, and an extensive marketplace for extensions, making it a favorite among developers. This guide covers the installation process for VS Code on <strong>Windows</strong>, <strong>macOS</strong>, and <strong>Linux</strong>, emphasizing the use of command-line tools for streamlined setup.</p>
+<section id="installing-vs-code-on-windows">
+<h2>Installing VS Code on Windows<a class="headerlink" href="#installing-vs-code-on-windows" title="Link to this heading">#</a></h2>
+<p>You can install VS Code on Windows using traditional installers or via command-line package managers like <code class="docutils literal notranslate"><span class="pre">winget</span></code>, <code class="docutils literal notranslate"><span class="pre">choco</span></code>, and <code class="docutils literal notranslate"><span class="pre">scoop</span></code>.</p>
+<section id="method-1-using-winget">
+<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">winget</span></code><a class="headerlink" href="#method-1-using-winget" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">winget</span></code> is a command-line package manager for Windows provided by Microsoft.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Open <strong>Command Prompt</strong> or <strong>PowerShell</strong> and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>winget<span class="w"> </span>install<span class="w"> </span>Microsoft.VisualStudioCode
+</pre></div>
+</div>
+</li>
+<li><p>This command downloads and installs the latest version of VS Code.</p></li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch VS Code from the Start Menu or by typing <code class="docutils literal notranslate"><span class="pre">code</span></code> in the command line:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-2-using-chocolatey-choco">
+<h3>Method 2: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)<a class="headerlink" href="#method-2-using-chocolatey-choco" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Chocolatey is a package manager for Windows that simplifies software installation.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Install <strong>Chocolatey</strong> by following the instructions on <a class="reference external" href="https://chocolatey.org/install">Chocolatey’s website</a>.</p></li>
+<li><p>After installing <code class="docutils literal notranslate"><span class="pre">choco</span></code>, open <strong>Command Prompt</strong> or <strong>PowerShell</strong> and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco<span class="w"> </span>install<span class="w"> </span>vscode
+</pre></div>
+</div>
+</li>
+<li><p>This will install VS Code and add it to your system PATH.</p></li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch VS Code with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-3-using-scoop">
+<h3>Method 3: Using <code class="docutils literal notranslate"><span class="pre">scoop</span></code><a class="headerlink" href="#method-3-using-scoop" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">scoop</span></code> is a lightweight command-line installer for Windows.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Install <strong>scoop</strong> by running the following in <strong>PowerShell</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>iwr<span class="w"> </span>-useb<span class="w"> </span>get.scoop.sh<span class="w"> </span><span class="p">|</span><span class="w"> </span>iex
+</pre></div>
+</div>
+</li>
+<li><p>After <code class="docutils literal notranslate"><span class="pre">scoop</span></code> is installed, install VS Code using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>scoop<span class="w"> </span>install<span class="w"> </span>vscode
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Open VS Code using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-4-using-the-installer">
+<h3>Method 4: Using the Installer<a class="headerlink" href="#method-4-using-the-installer" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Overview</strong>: Download the VS Code installer directly from the <a class="reference external" href="https://code.visualstudio.com/Download">official website</a>.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Visit the download page and select the installer for your Windows version.</p></li>
+<li><p>Run the installer and follow the setup wizard.</p></li>
+<li><p>Ensure you check “Add to PATH” during installation.</p></li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch VS Code by searching for it in the Start Menu or by typing <code class="docutils literal notranslate"><span class="pre">code</span></code> in the command line.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="installing-vs-code-on-macos">
+<h2>Installing VS Code on macOS<a class="headerlink" href="#installing-vs-code-on-macos" title="Link to this heading">#</a></h2>
+<section id="method-1-using-brew">
+<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">brew</span></code><a class="headerlink" href="#method-1-using-brew" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">brew</span></code> is a popular package manager for macOS that simplifies software installations.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Install <strong>Homebrew</strong> by running the following in <strong>Terminal</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install VS Code with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>visual-studio-code
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch VS Code from the Applications folder or using the terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-2-using-the-installer">
+<h3>Method 2: Using the Installer<a class="headerlink" href="#method-2-using-the-installer" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Overview</strong>: Download the VS Code <code class="docutils literal notranslate"><span class="pre">.dmg</span></code> file from the <a class="reference external" href="https://code.visualstudio.com/Download">official website</a>.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Open the downloaded <code class="docutils literal notranslate"><span class="pre">.dmg</span></code> file and drag the <strong>Visual Studio Code</strong> icon into the Applications folder.</p></li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Open VS Code from the <strong>Applications</strong> folder or by typing <code class="docutils literal notranslate"><span class="pre">code</span></code> in the terminal.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="installing-vs-code-on-linux">
+<h2>Installing VS Code on Linux<a class="headerlink" href="#installing-vs-code-on-linux" title="Link to this heading">#</a></h2>
+<p>VS Code can be installed on various Linux distributions using package managers like <code class="docutils literal notranslate"><span class="pre">apt</span></code>, <code class="docutils literal notranslate"><span class="pre">dnf</span></code>, or directly downloading the <code class="docutils literal notranslate"><span class="pre">.deb</span></code> or <code class="docutils literal notranslate"><span class="pre">.rpm</span></code> package.</p>
+<section id="method-1-using-apt-for-debian-ubuntu">
+<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">apt</span></code> for Debian/Ubuntu<a class="headerlink" href="#method-1-using-apt-for-debian-ubuntu" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">apt</span></code> is the package manager for Debian-based systems like Ubuntu.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Add Microsoft’s repository and install VS Code using the following commands:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>wget<span class="w"> </span>gpg
+wget<span class="w"> </span>-qO-<span class="w"> </span>https://packages.microsoft.com/keys/microsoft.asc<span class="w"> </span><span class="p">|</span><span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>&gt;<span class="w"> </span>packages.microsoft.gpg
+sudo<span class="w"> </span>install<span class="w"> </span>-o<span class="w"> </span>root<span class="w"> </span>-g<span class="w"> </span>root<span class="w"> </span>-m<span class="w"> </span><span class="m">644</span><span class="w"> </span>packages.microsoft.gpg<span class="w"> </span>/etc/apt/trusted.gpg.d/
+sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo &quot;deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main&quot; &gt; /etc/apt/sources.list.d/vscode.list&#39;</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>code
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Open VS Code using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-2-using-dnf-for-fedora">
+<h3>Method 2: Using <code class="docutils literal notranslate"><span class="pre">dnf</span></code> for Fedora<a class="headerlink" href="#method-2-using-dnf-for-fedora" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">dnf</span></code> is the package manager for Fedora.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Import the Microsoft GPG key and install VS Code:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>rpm<span class="w"> </span>--import<span class="w"> </span>https://packages.microsoft.com/keys/microsoft.asc
+sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s1">&#39;echo -e &quot;[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc&quot; &gt; /etc/yum.repos.d/vscode.repo&#39;</span>
+sudo<span class="w"> </span>dnf<span class="w"> </span>check-update
+sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>code
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch VS Code with:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-3-using-yum-for-centos-rhel">
+<h3>Method 3: Using <code class="docutils literal notranslate"><span class="pre">yum</span></code> for CentOS/RHEL<a class="headerlink" href="#method-3-using-yum-for-centos-rhel" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">yum</span></code> is the package manager for CentOS and older versions of RHEL.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Follow the steps for adding the Microsoft repository as shown above for <code class="docutils literal notranslate"><span class="pre">dnf</span></code>.</p></li>
+<li><p>Use <code class="docutils literal notranslate"><span class="pre">yum</span></code> to install VS Code:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>yum<span class="w"> </span>install<span class="w"> </span>code
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Open VS Code using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-4-using-the-deb-or-rpm-package">
+<h3>Method 4: Using the <code class="docutils literal notranslate"><span class="pre">.deb</span></code> or <code class="docutils literal notranslate"><span class="pre">.rpm</span></code> Package<a class="headerlink" href="#method-4-using-the-deb-or-rpm-package" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Download the <code class="docutils literal notranslate"><span class="pre">.deb</span></code> or <code class="docutils literal notranslate"><span class="pre">.rpm</span></code> package from the <a class="reference external" href="https://code.visualstudio.com/Download">official website</a>.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>For Debian/Ubuntu:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>./path-to-file.deb
+</pre></div>
+</div>
+</li>
+<li><p>For Fedora/CentOS:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>rpm<span class="w"> </span>-i<span class="w"> </span>path-to-file.rpm
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch VS Code using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>code<span class="w"> </span>.
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="setting-up-python-in-vs-code">
+<h2>Setting Up Python in VS Code<a class="headerlink" href="#setting-up-python-in-vs-code" title="Link to this heading">#</a></h2>
+<p>Once you have installed Visual Studio Code, the next step is to set it up for Python development. VS Code provides a rich ecosystem of extensions that make Python programming more efficient and enjoyable. Follow these steps to set up Python in VS Code and add essential extensions.</p>
+<section id="installing-the-python-extension">
+<h3>1. <strong>Installing the Python Extension</strong><a class="headerlink" href="#installing-the-python-extension" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: The <strong>Python</strong> extension in VS Code is provided by Microsoft and is essential for a smooth Python development experience. It adds features like syntax highlighting, code completion, debugging, and integrated Jupyter Notebook support.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Open <strong>VS Code</strong>.</p></li>
+<li><p>Go to the <strong>Extensions View</strong> by clicking on the Extensions icon in the sidebar or pressing <code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+X</span></code>.</p></li>
+<li><p>Search for “Python” and click <strong>Install</strong> for the extension provided by Microsoft.</p></li>
+<li><p>Alternatively, use the command palette (<code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+P</span></code> or <code class="docutils literal notranslate"><span class="pre">Cmd+Shift+P</span></code> on macOS) and type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ext<span class="w"> </span>install<span class="w"> </span>ms-python.python
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="selecting-the-python-interpreter">
+<h3>2. <strong>Selecting the Python Interpreter</strong><a class="headerlink" href="#selecting-the-python-interpreter" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Overview</strong>: After installing the Python extension, you need to select the interpreter that VS Code will use for running your Python scripts. This is crucial if you have multiple Python versions or virtual environments installed.</p></li>
+<li><p><strong>Steps</strong>:</p>
+<ul>
+<li><p>Open any Python file or create a new one with a <code class="docutils literal notranslate"><span class="pre">.py</span></code> extension.</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">Ctrl+Shift+P</span></code> (or <code class="docutils literal notranslate"><span class="pre">Cmd+Shift+P</span></code> on macOS) to open the <strong>Command Palette</strong>.</p></li>
+<li><p>Type <code class="docutils literal notranslate"><span class="pre">Python:</span> <span class="pre">Select</span> <span class="pre">Interpreter</span></code> and press <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p></li>
+<li><p>Choose the appropriate Python interpreter from the list (e.g., <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.x.x</span></code>).</p></li>
+<li><p>This selection will be saved in the <code class="docutils literal notranslate"><span class="pre">.vscode/settings.json</span></code> file in your project directory.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="recommended-extensions-for-python-development">
+<h3>3. <strong>Recommended Extensions for Python Development</strong><a class="headerlink" href="#recommended-extensions-for-python-development" title="Link to this heading">#</a></h3>
+<p>To enhance your Python development experience in VS Code, consider installing the following extensions:</p>
+<ul>
+<li><p><strong>Pylance</strong>:</p>
+<ul>
+<li><p><strong>Overview</strong>: Pylance is a fast type-checking and code intelligence tool for Python, offering better autocompletion and type checking.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Go to the <strong>Extensions View</strong> and search for “Pylance”.</p></li>
+<li><p>Click <strong>Install</strong>.</p></li>
+<li><p>Set <code class="docutils literal notranslate"><span class="pre">Pylance</span></code> as your default language server in the settings:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;python.languageServer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Pylance&quot;</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Python Linting and Formatting</strong>:</p>
+<ul>
+<li><p><strong>Overview</strong>: Linting helps detect errors and enforce coding standards in your Python code. Popular linters include <strong>flake8</strong> and <strong>pylint</strong>.</p></li>
+<li><p><strong>Installation</strong>: To install <code class="docutils literal notranslate"><span class="pre">pylint</span></code> or <code class="docutils literal notranslate"><span class="pre">flake8</span></code>, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>pylint
+</pre></div>
+</div>
+</li>
+<li><p>VS Code will automatically detect the linter and ask if you want to use it. You can also configure it in <code class="docutils literal notranslate"><span class="pre">settings.json</span></code>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;python.linting.enabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="nt">&quot;python.linting.pylintEnabled&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Jupyter Notebook Support</strong>:</p>
+<ul class="simple">
+<li><p><strong>Overview</strong>: If you work with Jupyter Notebooks, install the <strong>Jupyter</strong> extension for an integrated notebook experience within VS Code.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Search for “Jupyter” in the <strong>Extensions View</strong> and click <strong>Install</strong>.</p></li>
+<li><p>This extension allows you to run <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files directly in VS Code.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Prettier &amp; Black for Code Formatting</strong>:</p>
+<ul>
+<li><p><strong>Overview</strong>: Prettier and Black are popular code formatters that ensure your Python code is properly formatted and adheres to style guidelines.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">black</span></code> via pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip<span class="w"> </span>install<span class="w"> </span>black
+</pre></div>
+</div>
+</li>
+<li><p>In VS Code, enable <code class="docutils literal notranslate"><span class="pre">black</span></code> as the default formatter:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="nt">&quot;python.formatting.provider&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;black&quot;</span><span class="p">,</span>
+<span class="nt">&quot;editor.formatOnSave&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="running-python-scripts-in-vs-code">
+<h3>4. <strong>Running Python Scripts in VS Code</strong><a class="headerlink" href="#running-python-scripts-in-vs-code" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: You can run Python scripts directly from VS Code, either through the integrated terminal or using the <strong>Run Python File</strong> button.</p></li>
+<li><p><strong>Steps</strong>:</p>
+<ul>
+<li><p>Open a <code class="docutils literal notranslate"><span class="pre">.py</span></code> file in VS Code.</p></li>
+<li><p>Press <code class="docutils literal notranslate"><span class="pre">F5</span></code> to run the file in the debugger, or click the <strong>Run Python File</strong> button in the top right corner.</p></li>
+<li><p>To run scripts in the integrated terminal, open the terminal with `Ctrl+`` and type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>your_script.py
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="configuring-virtual-environments-in-vs-code">
+<h3>5. <strong>Configuring Virtual Environments in VS Code</strong><a class="headerlink" href="#configuring-virtual-environments-in-vs-code" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Using a virtual environment allows you to isolate dependencies for different projects, preventing conflicts between packages.</p></li>
+<li><p><strong>Steps</strong>:</p>
+<ul>
+<li><p>Create a virtual environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+</pre></div>
+</div>
+</li>
+<li><p>Activate the virtual environment:</p>
+<ul class="simple">
+<li><p><strong>Windows</strong>: <code class="docutils literal notranslate"><span class="pre">venv\Scripts\activate</span></code></p></li>
+<li><p><strong>macOS/Linux</strong>: <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">venv/bin/activate</span></code></p></li>
+</ul>
+</li>
+<li><p>Once activated, VS Code should automatically recognize the environment. If not, use <code class="docutils literal notranslate"><span class="pre">Python:</span> <span class="pre">Select</span> <span class="pre">Interpreter</span></code> from the command palette to select the environment.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>VS Code can be installed on any operating system using different methods, including direct downloads and command-line package managers. Here’s a quick recap:</p>
+<ul class="simple">
+<li><p><strong>Windows</strong> users can leverage <code class="docutils literal notranslate"><span class="pre">winget</span></code>, <code class="docutils literal notranslate"><span class="pre">choco</span></code>, and <code class="docutils literal notranslate"><span class="pre">scoop</span></code> for efficient installation.</p></li>
+<li><p><strong>macOS</strong> users can use <code class="docutils literal notranslate"><span class="pre">brew</span></code> for a streamlined setup.</p></li>
+<li><p><strong>Linux</strong> users can install using <code class="docutils literal notranslate"><span class="pre">apt</span></code>, <code class="docutils literal notranslate"><span class="pre">dnf</span></code>, <code class="docutils literal notranslate"><span class="pre">yum</span></code>, or download <code class="docutils literal notranslate"><span class="pre">.deb</span></code>/<code class="docutils literal notranslate"><span class="pre">.rpm</span></code> packages directly.</p></li>
+<li><p>Using command-line tools makes it easy to install, update, and manage your VS Code installation, helping you get started with coding quickly and efficiently.</p></li>
+<li><p>Setting up Python in VS Code involves installing the Python extension, selecting the right interpreter, and adding useful extensions like <code class="docutils literal notranslate"><span class="pre">Pylance</span></code> and <code class="docutils literal notranslate"><span class="pre">Jupyter</span></code>. With these tools, you can leverage VS Code’s powerful features to write, debug, and manage Python code more efficiently. The combination of a lightweight editor and a robust set of extensions makes VS Code a powerful IDE for Python development.</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chap-02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02-jupyter-notebook.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Jupyter Notebook</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="04-pycharm.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Installing PyCharm on Major Platforms</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-vs-code-on-windows">Installing VS Code on Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-winget">Method 1: Using <code class="docutils literal notranslate"><span class="pre">winget</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-chocolatey-choco">Method 2: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-scoop">Method 3: Using <code class="docutils literal notranslate"><span class="pre">scoop</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-4-using-the-installer">Method 4: Using the Installer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-vs-code-on-macos">Installing VS Code on macOS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-brew">Method 1: Using <code class="docutils literal notranslate"><span class="pre">brew</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-the-installer">Method 2: Using the Installer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-vs-code-on-linux">Installing VS Code on Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-apt-for-debian-ubuntu">Method 1: Using <code class="docutils literal notranslate"><span class="pre">apt</span></code> for Debian/Ubuntu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-dnf-for-fedora">Method 2: Using <code class="docutils literal notranslate"><span class="pre">dnf</span></code> for Fedora</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-yum-for-centos-rhel">Method 3: Using <code class="docutils literal notranslate"><span class="pre">yum</span></code> for CentOS/RHEL</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-4-using-the-deb-or-rpm-package">Method 4: Using the <code class="docutils literal notranslate"><span class="pre">.deb</span></code> or <code class="docutils literal notranslate"><span class="pre">.rpm</span></code> Package</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-python-in-vs-code">Setting Up Python in VS Code</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-python-extension">1. <strong>Installing the Python Extension</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#selecting-the-python-interpreter">2. <strong>Selecting the Python Interpreter</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#recommended-extensions-for-python-development">3. <strong>Recommended Extensions for Python Development</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-python-scripts-in-vs-code">4. <strong>Running Python Scripts in VS Code</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#configuring-virtual-environments-in-vs-code">5. <strong>Configuring Virtual Environments in VS Code</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Saad Laouadi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

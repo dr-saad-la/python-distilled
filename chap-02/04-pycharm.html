@@ -1,0 +1,831 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Installing PyCharm on Major Platforms &#8212; Python Programming Distilled</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chap-02/04-pycharm';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Installing Spyder on Major Platforms" href="05-spyder-ide.html" />
+    <link rel="prev" title="Installing Visual Studio Code (VS Code)" href="03-vs-code.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/book_logo.png" class="logo__image only-light" alt="Python Programming Distilled - Home"/>
+    <script>document.write(`<img src="../_static/book_logo.png" class="logo__image only-dark" alt="Python Programming Distilled - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../index.html">
+                    Python Programming Distilled
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chap-00/intro.html">Introduction to Python</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/01-what-is-python.html">What is Python?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/02-python-history.html">Python Version History</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/03-where-to-use-python.html">Where to User Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-00/04-python-ins-and-outs.html">Understanding How Python is Written and How It Works</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../chap-01/intro.html">Development Environment Setup</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/01-setup.html">Installing Python on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/02-python-interpreters.html">Python Interpreters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/03-python-repls.html">Python REPLs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../chap-01/04-python-idle.html">Python - IDLE (Integrated Development and Learning Environment)</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="intro.html">Python Development Tools</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="01-jupyter-lab-ide.html">Jupyter Lab IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="02-jupyter-notebook.html">Jupyter Notebook</a></li>
+<li class="toctree-l2"><a class="reference internal" href="03-vs-code.html">Installing Visual Studio Code (VS Code)</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Installing PyCharm on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="05-spyder-ide.html">Installing Spyder on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="06-eclipse.html">Installing Eclipse IDE on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="07-emacs.html">Installing Emacs for Python Development on Major Platforms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="08-text-editors.html">Text Editors for Python Programming</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchap-02/04-pycharm.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/chap-02/04-pycharm.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Installing PyCharm on Major Platforms</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-pycharm-on-windows">Installing PyCharm on Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-winget">Method 1: Using <code class="docutils literal notranslate"><span class="pre">winget</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-chocolatey-choco">Method 2: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-the-installer">Method 3: Using the Installer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-pycharm-on-macos">Installing PyCharm on macOS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-brew">Method 1: Using <code class="docutils literal notranslate"><span class="pre">brew</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-the-installer">Method 2: Using the Installer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-pycharm-on-linux">Installing PyCharm on Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-snap-recommended">Method 1: Using <code class="docutils literal notranslate"><span class="pre">snap</span></code> (Recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-the-tar-gz-archive">Method 2: Using the <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> Archive</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-apt-for-debian-ubuntu">Method 3: Using <code class="docutils literal notranslate"><span class="pre">apt</span></code> for Debian/Ubuntu</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-python-in-pycharm">Setting Up Python in PyCharm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="installing-pycharm-on-major-platforms">
+<h1>Installing PyCharm on Major Platforms<a class="headerlink" href="#installing-pycharm-on-major-platforms" title="Link to this heading">#</a></h1>
+<p><strong>PyCharm</strong> is a powerful Integrated Development Environment (IDE) developed by JetBrains specifically for Python development. It offers advanced features like code analysis, a debugger, project navigation, and support for various Python frameworks. PyCharm comes in two editions: <strong>Community Edition</strong> (free and open-source) and <strong>Professional Edition</strong> (paid, with advanced features). This guide covers the installation process for PyCharm on <strong>Windows</strong>, <strong>macOS</strong>, and <strong>Linux</strong>, using both GUI and command-line tools.</p>
+<section id="installing-pycharm-on-windows">
+<h2>Installing PyCharm on Windows<a class="headerlink" href="#installing-pycharm-on-windows" title="Link to this heading">#</a></h2>
+<p>You can install PyCharm on Windows using direct downloads or via command-line package managers like <code class="docutils literal notranslate"><span class="pre">winget</span></code> and <code class="docutils literal notranslate"><span class="pre">choco</span></code>.</p>
+<section id="method-1-using-winget">
+<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">winget</span></code><a class="headerlink" href="#method-1-using-winget" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">winget</span></code> is a command-line package manager for Windows provided by Microsoft.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Open <strong>Command Prompt</strong> or <strong>PowerShell</strong> and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>winget<span class="w"> </span>install<span class="w"> </span>JetBrains.PyCharm.Community
+</pre></div>
+</div>
+</li>
+<li><p>This command downloads and installs the <strong>Community Edition</strong> of PyCharm.</p></li>
+</ul>
+</li>
+<li><p><strong>For Professional Edition</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>winget<span class="w"> </span>install<span class="w"> </span>JetBrains.PyCharm.Professional
+</pre></div>
+</div>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch PyCharm from the Start Menu or by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pycharm
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-2-using-chocolatey-choco">
+<h3>Method 2: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)<a class="headerlink" href="#method-2-using-chocolatey-choco" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Chocolatey is a popular package manager for Windows.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Install <strong>Chocolatey</strong> by following the instructions on <a class="reference external" href="https://chocolatey.org/install">Chocolatey’s website</a>.</p></li>
+<li><p>After <code class="docutils literal notranslate"><span class="pre">choco</span></code> is installed, open <strong>Command Prompt</strong> or <strong>PowerShell</strong> and run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco<span class="w"> </span>install<span class="w"> </span>pycharm-community
+</pre></div>
+</div>
+</li>
+<li><p>To install the <strong>Professional Edition</strong>, use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>choco<span class="w"> </span>install<span class="w"> </span>pycharm
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Open PyCharm from the Start Menu or by running:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pycharm
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-3-using-the-installer">
+<h3>Method 3: Using the Installer<a class="headerlink" href="#method-3-using-the-installer" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Overview</strong>: Download the PyCharm installer directly from the <a class="reference external" href="https://www.jetbrains.com/pycharm/download">official website</a>.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Visit the download page and select the <strong>Community</strong> or <strong>Professional</strong> version.</p></li>
+<li><p>Download the installer and run it, following the setup wizard.</p></li>
+<li><p>Ensure you check the options to create a desktop shortcut and add PyCharm to the PATH if you prefer.</p></li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch PyCharm from the desktop shortcut or the Start Menu.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="installing-pycharm-on-macos">
+<h2>Installing PyCharm on macOS<a class="headerlink" href="#installing-pycharm-on-macos" title="Link to this heading">#</a></h2>
+<section id="method-1-using-brew">
+<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">brew</span></code><a class="headerlink" href="#method-1-using-brew" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">brew</span></code> is a package manager for macOS that simplifies software installations.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Install <strong>Homebrew</strong> by running the following in <strong>Terminal</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install PyCharm <strong>Community Edition</strong> using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>pycharm-ce
+</pre></div>
+</div>
+</li>
+<li><p>For the <strong>Professional Edition</strong>, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>--cask<span class="w"> </span>pycharm
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch PyCharm from the <strong>Applications</strong> folder or using the terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pycharm
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-2-using-the-installer">
+<h3>Method 2: Using the Installer<a class="headerlink" href="#method-2-using-the-installer" title="Link to this heading">#</a></h3>
+<ul class="simple">
+<li><p><strong>Overview</strong>: Download the PyCharm <code class="docutils literal notranslate"><span class="pre">.dmg</span></code> file from the <a class="reference external" href="https://www.jetbrains.com/pycharm/download">official website</a>.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Open the downloaded <code class="docutils literal notranslate"><span class="pre">.dmg</span></code> file and drag the <strong>PyCharm</strong> icon into the <strong>Applications</strong> folder.</p></li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Open PyCharm from the <strong>Applications</strong> folder or by typing <code class="docutils literal notranslate"><span class="pre">pycharm</span></code> in the terminal.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="installing-pycharm-on-linux">
+<h2>Installing PyCharm on Linux<a class="headerlink" href="#installing-pycharm-on-linux" title="Link to this heading">#</a></h2>
+<p>PyCharm can be installed on various Linux distributions using package managers like <code class="docutils literal notranslate"><span class="pre">snap</span></code>, or by downloading the <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> file from the official website.</p>
+<section id="method-1-using-snap-recommended">
+<h3>Method 1: Using <code class="docutils literal notranslate"><span class="pre">snap</span></code> (Recommended)<a class="headerlink" href="#method-1-using-snap-recommended" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: <code class="docutils literal notranslate"><span class="pre">snap</span></code> is a universal package manager for Linux.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>To install <strong>PyCharm Community Edition</strong>, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>pycharm-community<span class="w"> </span>--classic
+</pre></div>
+</div>
+</li>
+<li><p>For the <strong>Professional Edition</strong>, run:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>pycharm-professional<span class="w"> </span>--classic
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch PyCharm using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pycharm-community
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-2-using-the-tar-gz-archive">
+<h3>Method 2: Using the <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> Archive<a class="headerlink" href="#method-2-using-the-tar-gz-archive" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Download the PyCharm <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> file from the <a class="reference external" href="https://www.jetbrains.com/pycharm/download">official website</a> if <code class="docutils literal notranslate"><span class="pre">snap</span></code> is not available.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Download the file and extract it:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>tar<span class="w"> </span>-xzf<span class="w"> </span>pycharm-community-*.tar.gz
+</pre></div>
+</div>
+</li>
+<li><p>Move to the extracted directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>pycharm-community-*
+</pre></div>
+</div>
+</li>
+<li><p>Run the PyCharm launcher:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./bin/pycharm.sh
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul class="simple">
+<li><p>Create a desktop entry if you want easy access to PyCharm from your Linux desktop environment.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="method-3-using-apt-for-debian-ubuntu">
+<h3>Method 3: Using <code class="docutils literal notranslate"><span class="pre">apt</span></code> for Debian/Ubuntu<a class="headerlink" href="#method-3-using-apt-for-debian-ubuntu" title="Link to this heading">#</a></h3>
+<ul>
+<li><p><strong>Overview</strong>: Some distributions maintain their own repositories for PyCharm.</p></li>
+<li><p><strong>Installation</strong>:</p>
+<ul>
+<li><p>Add the repository:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>add-apt-repository<span class="w"> </span>ppa:mmk2410/intellij-idea
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>pycharm
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>Verify Installation</strong>:</p>
+<ul>
+<li><p>Launch PyCharm from the terminal using:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pycharm
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="setting-up-python-in-pycharm">
+<h2>Setting Up Python in PyCharm<a class="headerlink" href="#setting-up-python-in-pycharm" title="Link to this heading">#</a></h2>
+<p>After installing PyCharm, you will want to configure it for Python development:</p>
+<ol class="arabic simple">
+<li><p><strong>Start a New Project</strong>:</p>
+<ul class="simple">
+<li><p>Open PyCharm and select <strong>New Project</strong>.</p></li>
+<li><p>Choose a location for your project and specify the Python interpreter to use.</p></li>
+</ul>
+</li>
+<li><p><strong>Configure the Python Interpreter</strong>:</p>
+<ul class="simple">
+<li><p>PyCharm will automatically detect Python interpreters on your system. You can also configure a new interpreter, including virtual environments.</p></li>
+</ul>
+</li>
+<li><p><strong>Install Python Packages</strong>:</p>
+<ul class="simple">
+<li><p>PyCharm provides a built-in package manager. Go to <strong>File &gt; Settings &gt; Project &gt; Python Interpreter</strong> to add new libraries like <code class="docutils literal notranslate"><span class="pre">numpy</span></code>, <code class="docutils literal notranslate"><span class="pre">pandas</span></code>, and more.</p></li>
+</ul>
+</li>
+<li><p><strong>Debugging and Running Code</strong>:</p>
+<ul class="simple">
+<li><p>PyCharm has powerful debugging tools. Set breakpoints, run your code, and inspect variables easily from the debug window.</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="summary">
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
+<p>PyCharm offers a robust and feature-rich environment for Python development. It can be installed using traditional methods and command-line tools like <code class="docutils literal notranslate"><span class="pre">winget</span></code>, <code class="docutils literal notranslate"><span class="pre">choco</span></code>, and <code class="docutils literal notranslate"><span class="pre">scoop</span></code>, making it accessible on Windows, macOS, and Linux. The <strong>Community Edition</strong> is a great starting point for beginners, while the <strong>Professional Edition</strong> offers additional tools for advanced developers.</p>
+<p>Whether you’re developing web applications, working on data science projects, or building machine learning models, PyCharm provides the tools you need to be productive and efficient.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./chap-02"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="03-vs-code.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Installing Visual Studio Code (VS Code)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="05-spyder-ide.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Installing Spyder on Major Platforms</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-pycharm-on-windows">Installing PyCharm on Windows</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-winget">Method 1: Using <code class="docutils literal notranslate"><span class="pre">winget</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-chocolatey-choco">Method 2: Using Chocolatey (<code class="docutils literal notranslate"><span class="pre">choco</span></code>)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-the-installer">Method 3: Using the Installer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-pycharm-on-macos">Installing PyCharm on macOS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-brew">Method 1: Using <code class="docutils literal notranslate"><span class="pre">brew</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-the-installer">Method 2: Using the Installer</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-pycharm-on-linux">Installing PyCharm on Linux</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-1-using-snap-recommended">Method 1: Using <code class="docutils literal notranslate"><span class="pre">snap</span></code> (Recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-2-using-the-tar-gz-archive">Method 2: Using the <code class="docutils literal notranslate"><span class="pre">.tar.gz</span></code> Archive</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#method-3-using-apt-for-debian-ubuntu">Method 3: Using <code class="docutils literal notranslate"><span class="pre">apt</span></code> for Debian/Ubuntu</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-python-in-pycharm">Setting Up Python in PyCharm</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#summary">Summary</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Dr. Saad Laouadi
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
