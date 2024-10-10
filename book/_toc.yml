@@ -4,12 +4,27 @@
 format: jb-book
 root: index
 chapters:
-- file: chap-00/intro.md
+- file: chap-00/intro
   sections:
-    - file: chap-00/01-what-is-python.md
-    - file: chap-00/02-python-history.md
-    - file: chap-00/03-where-to-use-python.md
-    - file: chap-00/04-python-ins-and-outs.md
-- file: chap-01/intro.md
+    - file: chap-00/01-what-is-python
+    - file: chap-00/02-python-history
+    - file: chap-00/03-where-to-use-python
+    - file: chap-00/04-python-ins-and-outs
+- file: chap-01/intro
   sections:
-    - file: chap-01/setup.md
+    - file: chap-01/01-setup
+    - file: chap-01/02-python-interpreters
+    - file: chap-01/03-python-repls
+    - file: chap-01/04-python-idle
+- file: chap-02/intro
+  sections:
+    - file: chap-02/01-jupyter-lab-ide
+    - file: chap-02/02-jupyter-notebook
+    - file: chap-02/03-vs-code
+    - file: chap-02/04-pycharm
+    - file: chap-02/05-spyder-ide
+    - file: chap-02/06-eclipse
+    - file: chap-02/07-emacs
+    - file: chap-02/08-text-editors
+
+
